@@ -8,7 +8,7 @@ description: " "
 
 ## 鸣谢列表
 * [@xunhaii](//github.com/xunhaii)维护此站点及域名提供者
-* [@kdxiaoyi](//github.com/kdx233)提供此站点~很难看但起码比第一版好看~的第二版UI
+* [@kdxiaoyi](//github.com/kdx233)提供此站点~~很难看但起码比第一版好看~~的第二版UI
 * [MiSans字体](https://hyperos.mi.com/font/download)
 
 <script src="/assets/sober.min.js"></script><script src="/assets/pmd-reRender.min.js"></script>

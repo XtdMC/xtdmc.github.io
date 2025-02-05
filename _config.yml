@@ -5,9 +5,9 @@ theme: jekyll-theme-cayman
 #
 
 # Name of your site (displayed in the header)
-name: "小土豆 PotatoL"
+name: "小土豆｜PotatoL"
 # Short bio or description (displayed in the header)
-description: "创立于2021年8月9日，致力于构建和谐友好的Minecraft游戏社区！"
+description: "创立于2021年8月9日，致力于打造和谐友好的Minecraft玩家交流社区！"
 
 #
 # Flags below are optional
@@ -32,7 +32,7 @@ footer-links:
   email: gouzi@xtdmc.top
   #facebook:
   #flickr:
-  github: xunhaii
+  github: XtdMC
   #googleplus: # anything in your profile username that comes after plus.google.com/
   #instagram:
   #linkedin:
