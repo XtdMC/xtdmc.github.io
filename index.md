@@ -1,6 +1,6 @@
 ---
-title: "小土豆"
-description: "PotatoL"
+title: "小土豆服务器首页"
+description: "小土豆创立于2021年8月9日，致力于打造和谐友好的Minecraft玩家社区！"
 ---
 <small id="old_menu"><a href="/">首页</a></small><small><a href="../">←返回</a></small><br>
 
