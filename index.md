@@ -13,6 +13,7 @@ description: "小土豆创立于2021年8月9日，致力于打造和谐友好的
 * [UUID生成器](/uuid/)
 * [服规](/rule)
 * [《小土豆服务器用户协议与隐私政策》](/policy)
+* [版权声明](/licen)
 
 <div id="mdRender_config" data-sideship-hide="0"></div>
 <script src="/assets/sober.min.js"></script><script src="/assets/pmd-reRender.min.js"></script>
