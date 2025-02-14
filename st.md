@@ -1,5 +1,5 @@
 ---
-title: "小土豆服务器即将暂停运营"
+title: "小土豆服务器目前暂停运营"
 description: "官方公告"
 ---
 <small id="old_menu"><a href="/">首页</a></small><small><a href="../">←返回</a></small><br>
