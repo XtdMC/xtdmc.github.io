@@ -9,9 +9,9 @@ description: " "
 我们会在看见邮件后第一时间删除侵权违规内容，感谢您的支持！
 
 ## 鸣谢列表
-* [@xunhaii](//github.com/xunhaii)维护此站点及域名提供者
+* [@Xunhaii](//xunhaii.com/)维护此站点及域名提供者
 * [@kdxiaoyi](//github.com/kdx233)提供此站点~~很难看但起码比第一版好看~~的第二版UI
-* [@klpbbs](//github.com/klpbbs)UUID生成器作者
+* [@Klpbbs](//github.com/klpbbs)UUID生成器作者
 * [MiSans字体](https://hyperos.mi.com/font/download)
 
 <script src="/assets/sober.min.js"></script><script src="/assets/pmd-reRender.min.js"></script>
