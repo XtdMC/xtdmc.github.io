@@ -2,7 +2,7 @@
 title: "服规"
 description: " "
 ---
-<small id="old_menu"><a href="/">首页</a></small><small><a href="../">←返回</a></small><br>
+<small id="old_menu"><a href="/">首页</a></small>   <small><a href="../">←返回</a></small><br>
 
 **小土豆 - 游玩规则**
   
