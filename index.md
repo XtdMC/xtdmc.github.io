@@ -14,10 +14,9 @@ description: "小土豆创立于2021年8月9日，致力于打造和谐友好的
 本服支持Java正版/基岩版玩家入服！更多信息请在QQ群内获取。
 
 ## 其它
-* [UUID生成器](/uuid/)
 * [服规](/rule)
 * [《小土豆服务器用户协议与隐私政策》](/policy)
 * [版权声明](/licen)
 
 <div id="mdRender_config" data-sideship-hide="0"></div>
-<script src="/assets/sober.min.js"></script><script src="/assets/pmd-reRender.min.js"></script>
+<script src="https://www.xunhaii.com/xtdmc/javascript/sober.min.js"></script><script src="https://www.xunhaii.com/xtdmc/javascript/pmd-reRender.min.js"></script>

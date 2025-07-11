@@ -17,4 +17,4 @@ description: "官方公告"
 
 <div style="text-align: right;">小土豆服务器<br>2025年2月5日发布</div>
 
-<script src="/assets/sober.min.js"></script><script src="/assets/pmd-reRender.min.js"></script>
+<script src="https://www.xunhaii.com/xtdmc/javascript/sober.min.js"></script><script src="https://www.xunhaii.com/xtdmc/javascript/pmd-reRender.min.js"></script>

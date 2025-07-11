@@ -14,4 +14,4 @@ description: " "
 * [@Klpbbs](//github.com/klpbbs)UUID生成器作者
 * [MiSans字体](https://hyperos.mi.com/font/download)
 
-<script src="/assets/sober.min.js"></script><script src="/assets/pmd-reRender.min.js"></script>
+<script src="https://www.xunhaii.com/xtdmc/javascript/sober.min.js"></script><script src="https://www.xunhaii.com/xtdmc/javascript/pmd-reRender.min.js"></script>
