@@ -149,4 +149,4 @@ description: " "
 
 **小土豆服务器保留上述全部内容的最终解释权及其它合法权益。**
 
-<script src="/assets/sober.min.js"></script><script src="/assets/pmd-reRender.min.js"></script>
+<script src="https://www.xunhaii.com/xtdmc/assets/sober.min.js"></script><script src="https://www.xunhaii.com/xtdmc/assets/pmd-reRender.min.js"></script>

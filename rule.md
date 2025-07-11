@@ -17,4 +17,4 @@ description: " "
   
 **最终解释权归属小土豆服务器所有。**
 
-<script src="/assets/sober.min.js"></script><script src="/assets/pmd-reRender.min.js"></script>
+<script src="https://www.xunhaii.com/xtdmc/assets/sober.min.js"></script><script src="https://www.xunhaii.com/xtdmc/assets/pmd-reRender.min.js"></script>

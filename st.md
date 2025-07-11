@@ -13,8 +13,8 @@ description: "官方公告"
 
 您可以加入我们的QQ群获取最新信息。（加群二维码附在本页面底部，若无法正常显示，请关闭浏览器对本站的广告拦截器）
 
-<center><img src="/image/qq.png" alt="QQ群二维码" width="250px" height="250px" /></center><br>
+<center><img src="https://www.xunhaii.com/xtdmc/image/qq.png" alt="QQ群二维码" width="250px" height="250px" /></center><br>
 
 <div style="text-align: right;">小土豆服务器<br>2025年2月5日发布</div>
 
-<script src="/assets/sober.min.js"></script><script src="/assets/pmd-reRender.min.js"></script>
+<script src="https://www.xunhaii.com/xtdmc/assets/sober.min.js"></script><script src="https://www.xunhaii.com/xtdmc/assets/pmd-reRender.min.js"></script>
