@@ -6,7 +6,8 @@ description: "小土豆创立于2021年8月9日，致力于打造和谐友好的
 小土豆服务器复活辣！  
 有关本周目更新信息，请[点击此处](/update)查看完整内容
 
-<center><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="300px" height="195px" scrolling=no src="https://motdbe.blackbe.work/iframe.html?ip=xtdmc.top&port=23003&dark=false"></iframe></center>
+![Java版服务器状态](https://motdbe.blackbe.work/status_img/java?host=xtdmc.top:23003)  
+![基岩版服务器状态](https://motdbe.blackbe.work/status_img?host=xtdmc.top:23003)
 
 ## 欢迎光临小土豆服务器！
 ![QQ群850347853](https://www.xunhaii.com/xtdmc/image/qq.png "扫码加入交流群以获取地址！")
