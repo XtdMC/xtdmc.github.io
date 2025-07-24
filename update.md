@@ -38,6 +38,7 @@ description: "更新内容"
 锋利最高只有五级？抢夺最多只有三级？不存在的！本周目将允许玩家对附魔等级无限叠加！让您成为全服的数值怪不是梦！尽情上线体验吧！  
 ![预览图](https://www.xunhaii.com/xtdmc/image/enchant.jpg)
 
-
+## 视频演示
+您可以通过下方视频演示获得部分内容的使用方式。
 
 <script src="https://www.xunhaii.com/xtdmc/javascript/sober.min.js"></script><script src="https://www.xunhaii.com/xtdmc/javascript/pmd-reRender.min.js"></script>
