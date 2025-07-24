@@ -8,31 +8,16 @@ description: "更新内容"
 
 ## 1.箱子商店
 通过箱子来售卖/收购您的物品吧！<br>
-
 准心对准箱子，手持您想要售卖的物品，<br>
 使用命令 `/qs create 价格` 创建您的商店，<br>
 将物品放入箱子中，即可售卖您的商品。<br>
-<video controls>抱歉，但您的浏览器不支持播放视频。<source type="video/mp4" src="https://www.xunhaii.com/xtdmc/video/shop_create.mp4" /></video>
-
 使用 `/qs buy` 或 `/qs sell` 命令来切换商店出售/收购模式。<br>
-<video controls>抱歉，但您的浏览器不支持播放视频。<source type="video/mp4" src="https://www.xunhaii.com/xtdmc/video/shop_mode_switch.mp4" /></video>
-
-可以通过视频中的操作移除商店。
-<video controls>抱歉，但您的浏览器不支持播放视频。<source type="video/mp4" src="https://www.xunhaii.com/xtdmc/video/shop_remove.mp4" /></video>
-
-其他人可以通过左键商店并在聊天中发送数量来购买物品：
-<video controls>抱歉，但您的浏览器不支持播放视频。<source type="video/mp4" src="https://www.xunhaii.com/xtdmc/video/shop_buy.mp4" /></video>
-
-> 建议不要学视频里的那样自己买自己的东西~~，那不就给XHI7送钱吗？~~<br>
-> —— 某编者
 
 ## 2.技能插件
-砍树、打怪、挖矿，甚至跑跑跳跳都能收集经验！提升等级获取技能。更多内容请上线体验。<br>
-<video controls>抱歉，但您的浏览器不支持播放视频。<source type="video/mp4" src="https://www.xunhaii.com/xtdmc/video/skills.mp4" /></video>
+砍树、打怪、挖矿，甚至跑跑跳跳都能收集经验！提升等级获取技能。更多内容请上线体验。
 
 ## 3.连锁采集
-本周目新增连锁挖矿功能。潜行+用镐子挖矿即可连锁挖矿。连锁砍树功能在之前就已存在，使用斧头砍树即可直接砍树。<br>
-<video controls>抱歉，但您的浏览器不支持播放视频。<source type="video/mp4" src="https://www.xunhaii.com/xtdmc/video/chain_mining.mp4" /></video>
+本周目新增连锁挖矿功能。潜行+用镐子挖矿即可连锁挖矿。连锁砍树功能在之前就已存在，使用斧头砍树即可直接砍树。
 
 ## 4.附魔叠加
 锋利最高只有五级？抢夺最多只有三级？不存在的！本周目将允许玩家对附魔等级无限叠加！让您成为全服的数值怪不是梦！尽情上线体验吧！  
@@ -40,5 +25,17 @@ description: "更新内容"
 
 ## 视频演示
 您可以通过下方视频演示获得部分内容的使用方式。
+
+[创建商店视频](https://www.xunhaii.com/xtdmc/video/shop_create.mp4)
+
+[移除商店视频](https://www.xunhaii.com/xtdmc/video/shop_remove.mp4)
+
+[切换商店模式视频](https://www.xunhaii.com/xtdmc/video/shop_mode_switch.mp4)
+
+[使用商店购买物品视频](https://www.xunhaii.com/xtdmc/video/shop_buy.mp4)
+
+[技能插件视频](https://www.xunhaii.com/xtdmc/video/skills.mp4)
+
+[连锁挖矿视频](https://www.xunhaii.com/xtdmc/video/chain_mining.mp4)
 
 <script src="https://www.xunhaii.com/xtdmc/javascript/sober.min.js"></script><script src="https://www.xunhaii.com/xtdmc/javascript/pmd-reRender.min.js"></script>
