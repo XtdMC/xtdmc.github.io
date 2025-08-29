@@ -2,9 +2,9 @@
 title: "小土豆服务器首页"
 description: "小土豆创立于2021年8月9日，致力于打造和谐友好的Minecraft玩家社区！"
 ---
-
-小土豆服务器复活辣！  
-有关本周目更新信息，请[点击此处](/update)查看完整内容
+<meta http-equiv="refresh" content="2;url=/st">
+小土豆服务器当前暂不开放！  
+有关详细信息，请[点击此处](/st)查看完整内容
 
 ![Java版服务器状态](https://motdbe.blackbe.work/status_img/java?host=xtdmc.top:23003)  
 ![基岩版服务器状态](https://motdbe.blackbe.work/status_img?host=xtdmc.top:23003)
