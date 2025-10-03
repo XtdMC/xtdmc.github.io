@@ -1,0 +1,80 @@
+@media (pointer: fine) {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--s-color-outline-variant, #c0c8cc);
+    border-radius: 3px;
+  }
+  @supports not selector(::-webkit-scrollbar) {
+    * {
+      scrollbar-color: var(--s-color-outline-variant, #c0c8cc) transparent;
+    }
+  }
+}
+
+#_pmd-pContent {
+  display: grid;
+  place-items: center;
+}
+.main-card p {
+  margin-top: 0;
+  margin-bottom: 7px
+}
+.main-card {
+  margin: auto auto auto auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  max-width: 90%;
+  width: fit-content;
+  max-height: max-content;
+  height: fit-content;
+  display: block;
+  padding: 10px 16px 9px 16px;
+  backdrop-filter: blur(200px);
+  background: rgba(243, 240, 240, 0.4);
+}
+
+a s-icon {
+  width: 1em;
+  height: 1em;
+  transform: translateY(-0.05em) translateX(-0.05em);
+}
+
+#pageRoot[dark] * {
+  color-scheme: dark;
+}
+#pageRoot[dark] .highlight {
+  background-color: rgb(39 43 42);
+}
+#pageRoot[dark] .highlight .kd {
+  color: #ffffff;
+}
+#pageRoot[dark] .highlight .kv {
+  color: #ffffff;
+}
+#pageRoot[dark] .highlight .k {
+  color: #ffffff;
+}
+#pageRoot[dark] .highlight .o {
+  color: #ffffff;
+}
+#pageRoot[dark] .highlight .nt {
+  color: #0080ff;
+}
+#pageRoot[dark] .page-header {
+  --header-font-color: #f8f8f8;
+}
+
+.selectable, .selectable_ * {
+  user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+}
+.unselectable, .unselectable_ * {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
