@@ -20,4 +20,4 @@ description: "小土豆创立于2021年8月9日，致力于打造和谐友好的
 * [版权声明](/licen)
 
 <div id="mdRender_config" data-sideship-hide="0"></div>
-<script src="https://www.xunhaii.com/xtdmc/javascript/sober.min.js"></script><script src="https://www.xunhaii.com/xtdmc/javascript/pmd-reRender.min.js"></script>
+

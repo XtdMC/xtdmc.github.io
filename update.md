@@ -38,4 +38,4 @@ description: "更新内容"
 
 [连锁挖矿视频](https://www.xunhaii.com/xtdmc/video/chain_mining.mp4)
 
-<script src="https://www.xunhaii.com/xtdmc/javascript/sober.min.js"></script><script src="https://www.xunhaii.com/xtdmc/javascript/pmd-reRender.min.js"></script>
+
