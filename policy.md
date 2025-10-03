@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "用户协议与隐私政策"
 description: " "
 ---
@@ -149,4 +150,3 @@ description: " "
 
 **小土豆服务器保留上述全部内容的最终解释权及其它合法权益。**
 
-<script src="https://www.xunhaii.com/xtdmc/javascript/sober.min.js"></script><script src="https://www.xunhaii.com/xtdmc/javascript/pmd-reRender.min.js"></script>

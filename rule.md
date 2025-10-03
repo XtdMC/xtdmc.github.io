@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "服规"
 description: " "
 ---
@@ -17,4 +18,4 @@ description: " "
   
 **最终解释权归属小土豆服务器所有。**
 
-<script src="https://www.xunhaii.com/xtdmc/javascript/sober.min.js"></script><script src="https://www.xunhaii.com/xtdmc/javascript/pmd-reRender.min.js"></script>
+

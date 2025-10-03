@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "小土豆服务器目前暂停运营"
 description: "官方公告"
 ---
@@ -15,4 +16,4 @@ description: "官方公告"
 
 <div style="text-align: right;">小土豆服务器<br>2025年8月30日发布</div>
 
-<script src="https://www.xunhaii.com/xtdmc/javascript/sober.min.js"></script><script src="https://www.xunhaii.com/xtdmc/javascript/pmd-reRender.min.js"></script>
+
