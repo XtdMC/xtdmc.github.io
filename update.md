@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "小土豆 - 第八周目"
 description: "更新内容"
 ---

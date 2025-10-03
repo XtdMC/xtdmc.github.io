@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "授权协议页"
 description: " "
 ---

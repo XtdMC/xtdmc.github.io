@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "小土豆服务器目前暂停运营"
 description: "官方公告"
 ---

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "用户协议与隐私政策"
 description: " "
 ---
