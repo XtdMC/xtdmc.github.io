@@ -2,10 +2,10 @@ what-is-this: Jekyll的设置项，影响Markdown行为
 # 页面框架设置见/pmd-conf.js
 
 # 网站的标题
-title: PagesSober
+title: PotatoL
 # 网站描述
 description: >-
-  基于SoberJS的Github Pages主题
+  小土豆创立于2021年8月9日，致力于打造和谐友好的Minecraft玩家社区
 # 你的favicon（出现在浏览器tab上）图片URL，建议使用较小(64px × 64px)的图片
 favicon: /favicon.ico
 # 语言
@@ -24,13 +24,13 @@ exclude:
 
 # 以下为高级设置，非特殊请勿修改
 # ADVANCED CONFIG BELOW. NO MODIFY WITHOUT SPECIAL CASE.
-# theme: pages-sober
-# plugins:
-#   - jekyll-sitemap
-#   - jekyll-feed
-#   - jekyll-paginate
-theme: minima
+theme: pages-sober
 plugins:
+  - jekyll-sitemap
   - jekyll-feed
+  - jekyll-paginate
+# theme: minima
+# plugins:
+#   - jekyll-feed
 livereload: true
-debug: true
+debug: 
