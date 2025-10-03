@@ -1,0 +1,45 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "ENV | Install Jekyll Env (Linux)",
+      "promptOnClose": true,
+      "type": "shell",
+      "command": "sudo apt install jekyll -y",
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "ENV | Clean Jekyll Temp File (Linux)",
+      "promptOnClose": true,
+      "type": "shell",
+      "command": "rm -rd ./_site ./.jekyll-cache",
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "ENV | Uninstall Jekyll Env (Linux)",
+      "promptOnClose": true,
+      "type": "shell",
+      "command": "sudo apt remove jekyll -y",
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "DEV | Build Jekyll Pages",
+      "promptOnClose": true,
+      "type": "shell",
+      "command": "bundle exec jekyll serve",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    },
+  ]
+}
