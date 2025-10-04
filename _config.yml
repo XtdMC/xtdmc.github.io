@@ -31,3 +31,4 @@ plugins:
   - jekyll-paginate
 livereload: true
 debug: 
+permalink: /:categories/:title/index.html
