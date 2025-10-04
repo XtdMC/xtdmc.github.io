@@ -80,7 +80,7 @@ html::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   width:94%;
-  padding: 3px 3px 3px 3px;
+  padding: 5px 3px 5px 3px;
   margin: 3% 3% 0% 3%;
 }
 .sidebar_head > div[slot=headline] {
@@ -131,6 +131,53 @@ ul.index li.index::before {
   border-radius: 50%;
   border: .075em solid var(--s-color-primary, black);
 }
+
+div.imgview {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 0;
+  padding: 0 .3em 0.5em.3em;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+s-scroll-view.imgview {
+  background: repeating-conic-gradient(#fff 0% 25%, #ccc 0% 50%) top left / 20px 20px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+}
+s-scroll-view.imgview::before {
+  /* content: ""; */
+  display: block;
+  /* 当 --pmd-imgview-scale=1 时，替身尺寸 = 容器尺寸；
+     当 >1 时，替身尺寸等比放大，从而强制出现滚动条 */
+  width: calc(100% * var(--pmd-imgview-scale, 1));
+  height: calc(100% * var(--pmd-imgview-scale, 1));
+}
+#_pmd-pageRoot[dark] s-scroll-view.imgview {
+  background: repeating-conic-gradient(#888 0% 25%, #b0b0b0 0% 50%) top left / 20px 20px;
+}
+s-scroll-view.imgview div {
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+img.imgview {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transform: scale(var(--pmd-imgview-scale, 1));
+  transform-origin: left top;
+  pointer-events: auto;
+}
+
 .headerProcessed {
   text-decoration: none;
   cursor: alias;
@@ -147,6 +194,7 @@ ul.index li.index::before {
 .headerProcessed:hover > .headerLinkBtn {
   opacity: 1;
 }
+
 a {
   text-decoration: underline dotted;
 }
@@ -169,6 +217,7 @@ img:not(.ui-img) {
   box-sizing: content-box;
   display: block;
 }
+
 #_pmd-pageRoot[dark] * {
   color-scheme:dark;
 }
@@ -210,4 +259,7 @@ blockquote.pmd-blockinfo>:nth-child(2) {
 p.pmd-blockinfo {
   margin-bottom: 0.4rem;
 }
-
+s-popup-menu hr, s-popup hr {
+  color: var(--s-color-outline, #70787D);
+  width: 83%;
+}

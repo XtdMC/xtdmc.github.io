@@ -1,7 +1,7 @@
 // 将Github Pages自动生成的Markdown渲染页面进行自动重绘
 // Powered by SoberJS
 
-const PluginVer = ["3.0.0", 22];
+const PluginVer = ["3.1.0", 23];
 const pmdStorage = { Cookies: { set: function (e, t, o, n) { const s = `${encodeURIComponent(e)}=${encodeURIComponent(t)}`; if (o) { const e = new Date; e.setTime(e.getTime() + 1e3 * o), document.cookie = `${s}; expires=${e.toUTCString()}; path=${n}` } else document.cookie = `${s}; path=${n}` }, get: function (e) { const t = document.cookie.split("; "); for (const o of t) { const [t, n] = o.split("=", 2); if (decodeURIComponent(t) === e) return decodeURIComponent(n) } return null }, remove: function (e) { this.set(e, "", { expires: -1 }) }, getAll: function () { const e = document.cookie.split("; "), t = {}; for (const o of e) { const [e, n] = o.split("=", 2); t[decodeURIComponent(e)] = decodeURIComponent(n) } return t }, reset_dangerous: function () { const e = this.getAll(); for (const t in e) this.remove(t) } }, Local: { set: function (e, t) { localStorage.setItem(e, JSON.stringify(t)) }, get: function (e) { const t = localStorage.getItem(e); try { return JSON.parse(t) } catch (e) { return t } }, remove: function (e) { localStorage.removeItem(e) }, getAll: function () { const e = {}; for (let t = 0; t < localStorage.length; t++) { const o = localStorage.key(t); e[o] = this.get(o) } return e }, reset_dangerous: function () { localStorage.clear() } }, Session: { set: function (e, t) { sessionStorage.setItem(e, JSON.stringify(t)) }, get: function (e) { const t = sessionStorage.getItem(e); try { return JSON.parse(t) } catch (e) { return t } }, remove: function (e) { sessionStorage.removeItem(e) }, getAll: function () { const e = {}; for (let t = 0; t < sessionStorage.length; t++) { const o = sessionStorage.key(t); e[o] = this.get(o) } return e }, reset_dangerous: function () { sessionStorage.clear() } } };
 document.body.innerHTML += `<style id=_pmd-style-dynamic>body{background-image:url(${conf.img.background.src});}#_pmd-pageRoot{background:rgba(250,253,252,${conf.img.background.alpha[0]});backdrop-filter:blur(${conf.img.background.blur}px)}#_pmd-pageRoot[dark]{background:rgba(5,2,3,${conf.img.background.alpha[1]});backdrop-filter:blur(${conf.img.background.blur}px)}</style><style id=_pmd-style-custom>${conf.info.style}</style>`;
 //pmd元素常量组
@@ -58,7 +58,6 @@ const pmdElements = {
       toTop_intervalID: -1,
       toTop_interval_speed: 0,
     },
-    root: document.getElementById("_pmd-mainContent"),
     root: document.getElementById("_pmd-originalContent"),
     header: {
       root: document.getElementsByClassName("page-header")[0],
@@ -78,8 +77,23 @@ const pmdElements = {
     footer: document.getElementById("_pmd-footer"),
     jekyll_conf: document.getElementById("jekyll-meta"),
   },
-  pageConfig: document.getElementById("mdRender_config"),
+  pageConfig: document.getElementById("_pmd-config"),
   index_overwrite: document.getElementById("index_overwrite"),
+  imgview: {
+    root: document.getElementById("_pmd-imgview"),
+    title: document.getElementById("_pmd-imgview-title"),
+    statement: {
+      alt: document.getElementById("_pmd-imgview-statement-alt"),
+      info: document.getElementById("_pmd-imgview-statement-info"),
+    },
+    tools: {
+      open: document.getElementById("_pmd-imgview-openBtn"),
+      close: document.getElementById("_pmd-imgview-closeBtn"),
+      scale: document.getElementById("_pmd-imgview-scale"),
+    },
+    imgSize: document.querySelector("s-scroll-view.imgview div"),
+    imgEle: document.getElementById("_pmd-imgview-imgElement"),
+  },
 };
 
 //覆写pmd conf
@@ -166,6 +180,28 @@ function selectAllTextInElement(element) {
   selection.removeAllRanges();
   selection.addRange(range);
 };
+/**
+ * 将文件体积大小由字节(Byte)格式化为易读格式
+ * @param {Int} bytes 原字节大小
+ * @param {Int} digits 小数点后保留精度位数
+ * @param {Int} scaleMode 单位进制：[0] 1000进制 | [1] 1024进制
+ * @returns {String} 格式化后的文件体积大小，最大单位为PB(PiB)
+ * @throws {Error} 如果 scaleMode 不为 0 或 1 时抛出错误
+ * @throws {Error} 如果 digitals 不为 非负整数 时抛出错误
+ */
+function formatFileSize(bytes, digits = 2, scaleMode = 0) {
+  if /* 非正数字节处理 */(bytes <= 0) { return "0 B"; };
+  if /* 检查digits输入是否合法 */(typeof digits != "number" || digits < 0 || !Number.isInteger(digits)) { throw new Error("ValueError: digits was found as" + digits); };
+  if /* 检查scaleMode输入是否合法 */(scaleMode != 0 && scaleMode != 1) { throw new Error("ValueError: scaleMode only can be 0 or 1 but found " + scaleMode); };
+  const k = [1000, 1024];
+  if /* 最大以PB为单位 */(bytes >= k[scaleMode] ** 5) {
+    return (bytes / k[scaleMode] ** 5).toFixed(digits) + [" PB", " PiB"][scaleMode];
+  };
+  /* 1B~0.999PB时处理 */
+  const sizes = [["B", "KB", "MB", "GB", "TB", "PB"], ["B", "KiB", "MiB", "GiB", "TiB", "PiB"]];
+  let i = Math.floor(Math.log(bytes) / Math.log(k[scaleMode]));
+  return parseFloat((bytes / Math.pow(k[scaleMode], i)).toFixed(digits)) + " " + sizes[scaleMode][i];
+};
 
 //应用配色方案
 if (!!pmdStorage.Cookies.get("pmd-prefer_color_theme")) {
@@ -205,33 +241,128 @@ pmdElements.sidebar.slot3.user_setting.color.root.addEventListener("change", () 
 });
 
 //img元素处理
-document.querySelectorAll("img").forEach((imgElement) => {
-  imgElement.addEventListener("error", () => {
-    if (imgElement.dataset.pmdError == "true") { return; };
-    imgElement.dataset.pmdError = "true";
-    imgElement.dataset.origin = imgElement.src;
-    imgElement.src = conf.img.error;
-  });
-  if (imgElement.dataset.pmduiimg == "true") {
-    imgElement.addEventListener("click", () => {
-      if (imgElement.dataset.pmdError == "true") {
-        imgElement.dataset.pmdError = "";
-        imgElement.src = imgElement.dataset.origin;
-      } else {
-        if (conf.img.view) {
-          imgElement.dataset.visit = imgElement.src;
-          if (conf.img.imgse_com.enabled) {
-            imgElement.dataset.visit = imgElement.dataset.visit.replace(/\.md\./, ".");
-          };
-          if (conf.img.imgse_com.detail && /ax1x\.com/.test(imgElement.dataset.visit)) {
-            imgElement.dataset.visit = `https://imgse.com/i/` + imgElement.dataset.visit.replace(/\.md\./, ".").split("/").pop().split(".")[0];
-          };
-          openURL(imgElement.dataset.visit, false);
-        };
+const pmdImageHandle = {
+  callerCheck(v) {
+    if (!(v instanceof HTMLImageElement)) {
+      console.error("[PMD.imgElementHandle.onerror] 捕获到错误：调用函数组 pmdImageHandle 的对象并不为 HTMLImageElement：", v);
+      return false;
+    };
+    return true;
+  },
+  error(e = new Event()) {
+    if (e.target.dataset?.pmdError == "true" || !pmdImageHandle.callerCheck(e.target)) { return; };
+    if (e.target.dataset.pmdError == "once") { msg(`该图片仍未能加载：请检查您的网络连接、广告拦截插件和图片链接。`, "好", "warning"); };
+    e.target.dataset.pmdError = "true";
+    e.target.dataset.originUrl = e.target.src;
+    e.target.src = conf.img.error;
+  },
+  click(e = new Event()) {
+    e.preventDefault();
+    if (!pmdImageHandle.callerCheck(e.target)) { return; };
+    if (e.target.dataset.pmdError == "true") {
+      e.target.dataset.pmdError = "once";
+      e.target.src = e.target.dataset.originUrl;
+    } else {
+      if (conf.img.imgse_com.enabled) {
+        /* 若设置项允许，则在点击后加载高清大图 */
+        e.target.src = e.target.src.replace(/\.md\./, ".");
       };
+      if (conf.img.view) {
+        if (!!e.target.title) {
+          pmdElements.imgview.title.innerHTML = e.target.title;
+          pmdElements.imgview.statement.alt.innerHTML = e.target.alt;
+          pmdElements.imgview.statement.alt.style = "";
+        } else {
+          pmdElements.imgview.title.innerHTML = e.target.alt;
+          pmdElements.imgview.statement.alt.style = "display:none;";
+        };
+        pmdElements.imgview.tools.scale.value = "1.00";
+        pmdElements.imgview.imgSize.style = ``;
+        pmdElements.imgview.statement.info.innerHTML = "图片正在加载……";
+        pmdElements.imgview.imgEle.src = "";
+        pmdElements.imgview.imgEle.src = e.target.src;
+        pmdElements.imgview.root.showed = "true";
+      };
+    };
+  },
+};
+document.querySelectorAll("img").forEach((e) => {
+  if (!e.dataset.pmduiimg && !e.dataset.pmdUiImg) {
+    e.addEventListener("click", pmdImageHandle.click);
+    e.addEventListener("contextmenu", pmdImageHandle.click);
+  } else {
+    e.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
     });
   };
+  e.addEventListener("error", pmdImageHandle.error);
 });
+
+//查看大图事件绑定
+pmdElements./* 关闭按钮 */imgview.tools.close.addEventListener("click", () => {
+  pmdElements.imgview.root.showed = "false";
+});
+if (conf.img.share) {
+  pmdElements.imgview.tools.open.style = "";
+  pmdElements./* 在新标签页中打开 */imgview.tools.open.addEventListener("click", () => {
+    openURL(pmdElements.imgview.imgEle.src, false);
+  });
+} else {
+  pmdElements.imgview.tools.open.style = "display:none;";
+};
+pmdElements./* 缩放图片 */imgview.tools.scale.addEventListener("change", (e) => {
+  if (e.target.value <= 0) { e.target.value = 1; };
+  if (e.target.value >= 100) { e.target.value = 100; };
+  e.target.value = Math.pow(e.target.value,1).toFixed(2);
+  pmdElements.imgview.imgSize.style = `--pmd-imgview-scale: ${e.target.value};`;
+});
+pmdElements./* 图片基本信息 */imgview.imgEle.addEventListener("load", async (e) => {
+  let mime = "unknown", w = e.target.naturalWidth, h = e.target.naturalHeight;
+  let rsp, blob, size;
+  try {
+    /* 先命中缓存拿到请求数据 */
+    rsp = await fetch(e.target.src);
+    blob = await rsp.blob();
+    /* 读取MIME类型 */
+    mime = blob.type || "image/unknown";
+    /* 对数法算出实际体积 */
+    size = formatFileSize(blob.size, 1, conf.info.prefer.storage);
+  } catch (err) {/* 若因CROS等原因失败则置为未知 */
+    mime = "image/unknown";
+    size = "未知大小";
+    console.error("[PMD.imgView.getDetail] 捕获到错误：获取图片元数据失败：", err);
+  };
+  pmdElements.imgview.statement.info.innerHTML = `${w}×${h}px | ${mime} | ${size}`;
+});
+
+// old  version
+// document.querySelectorAll("img").forEach((imgElement) => {
+//   imgElement.addEventListener("error", () => {
+//     if (imgElement.dataset.pmdError == "true") { return; };
+//     imgElement.dataset.pmdError = "true";
+//     imgElement.dataset.origin = imgElement.src;
+//     imgElement.src = conf.img.error;
+//   });
+//   if (imgElement.dataset.pmduiimg == "true") {
+//     imgElement.addEventListener("click", () => {
+//       if (imgElement.dataset.pmdError == "true") {
+//         imgElement.dataset.pmdError = "";
+//         imgElement.src = imgElement.dataset.origin;
+//       } else {
+//         if (conf.img.view) {
+//           imgElement.dataset.visit = imgElement.src;
+//           if (conf.img.imgse_com.enabled) {
+//             imgElement.dataset.visit = imgElement.dataset.visit.replace(/\.md\./, ".");
+//           };
+//           if (conf.img.imgse_com.detail && /ax1x\.com/.test(imgElement.dataset.visit)) {
+//             imgElement.dataset.visit = `https://imgse.com/i/` + imgElement.dataset.visit.replace(/\.md\./, ".").split("/").pop().split(".")[0];
+//           };
+//           openURL(imgElement.dataset.visit, false);
+//         };
+//       };
+//     });
+//   };
+// });
 
 //Github链接处理
 if (conf.info.view_on_github) {
@@ -474,7 +605,7 @@ if (!!conf.copy.endnote) {
     document.addEventListener('copy', async (event) => {
       try {
         await navigator.clipboard.writeText(window.getSelection().toString() + endnote);
-        msg(`已复制文本，请注意遵守授权协议 ${conf.info.licen.what}。`, `好`);
+        msg(`已复制文本，请注意遵守授权协议 ${conf.info.licen.what}。`, `好`, "info");
       } catch (err) {
         msg("复制失败，无法访问剪贴板。", "好", true);
         console.error(err);
