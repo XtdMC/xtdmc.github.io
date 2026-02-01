@@ -46,10 +46,10 @@ const conf = {
       detail: true,
     },
     /*图片加载失败后的占位符图片*/
-    error: "https://www.xunhaii.com/xtdmc/image/load_err.svg",
+    error: "https://xtd-static.xunhaii.com/image/load_err.svg",
     background: {
       /*背景图片（自动应用不透明遮罩）*/
-      src: "https://www.xunhaii.com/xtdmc/image/bg.png",
+      src: "https://xtd-static.xunhaii.com/image/bg.png",
       /*背景图片遮罩透明度，分别为亮色和暗色遮罩，范围0~1*/
       alpha: [0.8, 0.82],
       /*背景图片模糊度，为-1禁用*/
@@ -59,7 +59,7 @@ const conf = {
   sidebar: {
     solt_1: {
       /*左侧边栏·第1格·背景图片*/
-      src: `https://www.xunhaii.com/xtdmc/image/head.png`,
+      src: `https://xtd-static.xunhaii.com/image/head.png`,
       /*左侧边栏·第1格·背景图片描述*/
       alt: `PotatoL`,
       /*左侧边栏·第1格·描述文案背景，依次亮色透明度、暗色透明度、亮色模糊度、暗色模糊度*/

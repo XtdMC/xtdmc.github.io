@@ -12,7 +12,6 @@ description: " "
 ## 鸣谢列表
 * [@Xunhaii](//xunhaii.com/)维护此站点及域名提供者
 * [@kdxiaoyi](//github.com/kdx233)提供此站点~~很难看但起码比第一版好看~~的第二版UI
-* [@Klpbbs](//github.com/klpbbs)UUID生成器作者
 * [MiSans字体](https://hyperos.mi.com/font/download)
 
 

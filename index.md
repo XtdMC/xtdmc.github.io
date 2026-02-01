@@ -10,7 +10,7 @@ description: "小土豆创立于2021年8月9日，致力于打造和谐友好的
 ![基岩版服务器状态](https://motdbe.blackbe.work/status_img?host=xtdmc.top:32586)
 
 ## 欢迎光临小土豆服务器！
-![QQ群850347853](https://www.xunhaii.com/xtdmc/image/qq.png "扫码加入交流群以获取地址！")
+![QQ群850347853](https://xtd-static.xunhaii.com/image/qq.png "扫码加入交流群以获取地址！")
 
 本服支持Java正版/基岩版玩家入服！更多信息请在QQ群内获取。
 
