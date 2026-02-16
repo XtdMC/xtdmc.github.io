@@ -16,7 +16,10 @@ description: "官方公告"
 您可以加入我们的QQ群获取最新信息。（加群二维码附在本页面底部，若无法正常显示，请关闭浏览器对本站的广告拦截器）
 
 <center><img src="https://xtd-static.xunhaii.com/image/qq.png" alt="QQ群二维码" width="250px" height="250px" /></center><br>
+
 <!--
-<div style="text-align: right;">小土豆服务器<br>2025年8月30日发布</div>
+
+<div style="text-align: right;">小土豆服务器<br>2026年2月28日发布</div>
+
 -->
 
