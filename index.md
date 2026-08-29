@@ -16,14 +16,14 @@ description: "小土豆创立于2021年8月9日，致力于打造和谐友好的
 加入条件：拥有白名单（可在本页底部点击申请）  
 
 ## 图集
-![小土豆宣传图](https://xtd-static.xunhaii.com/image/index/potatol_pic_1.png "小土豆宣传图")
-![小土豆宣传图](https://xtd-static.xunhaii.com/image/index/potatol_pic_2.png "小土豆宣传图")
-![小土豆宣传图](https://xtd-static.xunhaii.com/image/index/potatol_pic_3.png "小土豆宣传图")
-![小土豆宣传图](https://xtd-static.xunhaii.com/image/index/potatol_pic_4.png "小土豆宣传图")
-![小土豆宣传图](https://xtd-static.xunhaii.com/image/index/potatol_pic_5.png "小土豆宣传图")
-![小土豆宣传图](https://xtd-static.xunhaii.com/image/index/potatol_pic_6.png "小土豆宣传图")
-![小土豆宣传图](https://xtd-static.xunhaii.com/image/index/potatol_pic_7.png "小土豆宣传图")
-![小土豆宣传图](https://xtd-static.xunhaii.com/image/index/potatol_pic_8.png "小土豆宣传图")
+![小土豆宣传图](https://xtd-static.xunhaii.com/image/potatol_pic_1.png "小土豆宣传图")
+![小土豆宣传图](https://xtd-static.xunhaii.com/image/potatol_pic_2.png "小土豆宣传图")
+![小土豆宣传图](https://xtd-static.xunhaii.com/image/potatol_pic_3.png "小土豆宣传图")
+![小土豆宣传图](https://xtd-static.xunhaii.com/image/potatol_pic_4.png "小土豆宣传图")
+![小土豆宣传图](https://xtd-static.xunhaii.com/image/potatol_pic_5.png "小土豆宣传图")
+![小土豆宣传图](https://xtd-static.xunhaii.com/image/potatol_pic_6.png "小土豆宣传图")
+![小土豆宣传图](https://xtd-static.xunhaii.com/image/potatol_pic_7.png "小土豆宣传图")
+![小土豆宣传图](https://xtd-static.xunhaii.com/image/potatol_pic_8.png "小土豆宣传图")
 ## 加入社群
 您可以扫描下方二维码加入QQ群聊了解更多信息！
 ![QQ群850347853](https://xtd-static.xunhaii.com/image/qq.png "扫码加入交流群以获取地址！")
